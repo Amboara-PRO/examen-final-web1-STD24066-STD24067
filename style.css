@@ -9,6 +9,10 @@ SOUS-TITRE : Roboto Condensed */
   padding: 0;
   box-sizing: border-box;
   background: #f9f9f9;
+  font-family: "Roboto";
+}
+body{
+  height: 100vh;
 }
 :root {
   --background: #f9f9f9; /* Fond clair */
