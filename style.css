@@ -14,6 +14,9 @@ SOUS-TITRE : Roboto Condensed */
 body{
   height: 100vh;
 }
+h1{
+  font-family: "Montserrat";
+}
 :root {
   --background: #f9f9f9; /* Fond clair */
   --text: #333333; /* Texte sombre */
