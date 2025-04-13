@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="typingtest-com-icon-filled-256.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/typingtest-com-icon-filled-256.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Typing Test</title>
-</head>
+  </head>
 
-<body>
-    <header>
+  <body>
+    <div class="contents">
+      <header>
         <h1>Typing Test</h1>
-        <label for="mode">Select Mode:</label>
-        <select id="mode">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-    </header>
+        <p id="motivationSentence">Practice "Typing Test" to improve your speed and accuracy</p>
+        <nav class="navBar">
+          <div class="navbar_options">
+            <div id="home">
+              <a href="#" class="options">
+                <i class="bx bx-home"></i>
+                <p>Home</p>
+              </a>
+            </div>
+            <div id="setting">
+              <a href="#" class="options">
+                <i class="bx bx-cog"></i>
+                <p>Setting</p>
+              </a>
+            </div>
+          </div>
 
-    <main>
+          <img src="images/logo WEB1.png" alt="" id="logo" />
+        </nav>
+      </header>
+      <label for="mode">Select Mode:</label>
+      <select id="mode">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <main>
         <p id="word-display"></p>
-        <input type="text" id="input-field" autofocus>
-        <p id="results">Results : </p>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-
+        <input type="text" id="input-field" autofocus />
+        <p id="results">Results :</p>
+      </main>
+    </div>
+  </body>
 </html>

@@ -8,14 +8,71 @@ SOUS-TITRE : Roboto Condensed */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #f9f9f9;
   font-family: "Roboto";
 }
-body{
+body {
+  background: #dddddd;
+}
+.contents {
+  width: 70%;
+  margin: 0 auto;
+  background: #f9f9f9;
+  box-shadow: 0 0 5px #dddddd;
   height: 100vh;
 }
-h1{
+h1 {
   font-family: "Montserrat";
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  color: #ff9800;
+  font-size: 2.5rem;
+  padding-block: 0.5rem;
+}
+#motivationSentence{
+  text-align: center;
+  padding-block: 0.5rem;
+  font-family: "Montserrat";
+}
+.navBar {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  width: 100%;
+  background: #007bff;
+  box-shadow: 0 0 10px #dddddd83;
+}
+.navbar_options {
+  margin-inline: 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 5rem;
+  height: 5rem;
+}
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+i {
+  font-size: 1.5rem;
+}
+.options p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: "Montserrat";
+}
+#logo {
+  margin-inline: 1rem;
+  width: 5rem;
+  filter: brightness(0) invert(1);
+  height: 5rem;
+}
+.navbar_options a {
+  text-decoration: none;
+  color: #f9f9f9;
 }
 :root {
   --background: #f9f9f9; /* Fond clair */
