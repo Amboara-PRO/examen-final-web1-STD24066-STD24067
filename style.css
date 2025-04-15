@@ -10,6 +10,13 @@ SOUS-TITRE : Roboto Condensed */
   box-sizing: border-box;
   font-family: "Roboto";
 }
+:root {
+  --background: #f9f9f9; /* Fond clair */
+  --text: #333333; /* Texte sombre */
+  --primary: #007bff; /* Bleu vif pour les boutons */
+  --accent: #ff9800; /* Orange pour attirer l'attention */
+  --border: #dddddd; /* Bordures subtiles */
+}
 body {
   background: #dddddd;
 }
@@ -29,7 +36,7 @@ h1 {
   font-size: 2.5rem;
   padding-block: 0.5rem;
 }
-#motivationSentence{
+#motivationSentence {
   text-align: center;
   padding-block: 0.5rem;
   font-family: "Montserrat";
@@ -73,11 +80,4 @@ i {
 .navbar_options a {
   text-decoration: none;
   color: #f9f9f9;
-}
-:root {
-  --background: #f9f9f9; /* Fond clair */
-  --text: #333333; /* Texte sombre */
-  --primary: #007bff; /* Bleu vif pour les boutons */
-  --accent: #ff9800; /* Orange pour attirer l'attention */
-  --border: #dddddd; /* Bordures subtiles */
 }
