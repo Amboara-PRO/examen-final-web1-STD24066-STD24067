@@ -86,7 +86,11 @@ i {
   justify-content: space-around;
   margin-block: 1rem;
 }
-input{
+#word-display{
+  font-size: 1.5rem;
+  margin: 2rem;
+}
+.input{
   width: 100%;
   display: flex;
   justify-content: center;
@@ -94,6 +98,16 @@ input{
 input{
   width: 70%;
   margin: 0 auto;
+  padding-bottom: 2rem;
+  outline: none;
+  font-family: "roboto";
+  font-size: 1rem;
+  background-color: #dddddd;
+  border: none;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-top: 5px;
+  box-shadow: 0 10px 15px -3px #0000001a;
 }
 :root {
   --background: #f9f9f9; /* Fond clair */
