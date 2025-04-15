@@ -86,6 +86,14 @@ i {
   justify-content: space-around;
   margin-block: 1rem;
 }
+input{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+input{
+  width: 70%;
+}
 :root {
   --background: #f9f9f9; /* Fond clair */
   --text: #333333; /* Texte sombre */
@@ -93,3 +101,4 @@ i {
   --accent: #ff9800; /* Orange pour attirer l'attention */
   --border: #dddddd; /* Bordures subtiles */
 }
+
