@@ -24,7 +24,7 @@ body {
   width: 70%;
   margin: 0 auto;
   background: #f9f9f9;
-  box-shadow: 0 0 5px #dddddd;
+  box-shadow: 0 0 10px #dddddd;
   height: 100vh;
 }
 h1 {
@@ -80,4 +80,11 @@ i {
 .navbar_options a {
   text-decoration: none;
   color: #f9f9f9;
+}
+:root {
+  --background: #f9f9f9; /* Fond clair */
+  --text: #333333; /* Texte sombre */
+  --primary: #007bff; /* Bleu vif pour les boutons */
+  --accent: #ff9800; /* Orange pour attirer l'attention */
+  --border: #dddddd; /* Bordures subtiles */
 }
