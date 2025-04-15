@@ -109,6 +109,13 @@ input{
   padding-top: 5px;
   box-shadow: 0 10px 15px -3px #0000001a;
 }
+#results{
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
 :root {
   --background: #f9f9f9; /* Fond clair */
   --text: #333333; /* Texte sombre */

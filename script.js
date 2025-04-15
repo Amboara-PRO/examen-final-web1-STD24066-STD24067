@@ -67,7 +67,7 @@ const getCurrentStats = () => {
   const wpm = wordsToType[currentWordIndex].length / 5 / (elapsedTime / 60); // 5 chars = 1 word
   const accuracy =
     (wordsToType[currentWordIndex].length / inputField.value.length) * 100;
-
+    
   return { wpm: wpm.toFixed(2), accuracy: accuracy.toFixed(2) };
 };
 
