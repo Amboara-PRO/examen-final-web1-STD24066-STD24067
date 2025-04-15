@@ -17,7 +17,7 @@ body {
   width: 70%;
   margin: 0 auto;
   background: #f9f9f9;
-  box-shadow: 0 0 5px #dddddd;
+  box-shadow: 0 0 10px #dddddd;
   height: 100vh;
 }
 h1 {
@@ -73,6 +73,12 @@ i {
 .navbar_options a {
   text-decoration: none;
   color: #f9f9f9;
+}
+.content_mode{
+  display: flex;
+  gap: 3rem;
+  margin-block: 1rem;
+  justify-content: space-around;
 }
 :root {
   --background: #f9f9f9; /* Fond clair */
