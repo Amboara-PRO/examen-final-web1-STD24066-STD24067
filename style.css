@@ -81,6 +81,11 @@ i {
   text-decoration: none;
   color: #f9f9f9;
 }
+.content_mode{
+  display: flex;
+  justify-content: space-around;
+  margin-block: 1rem;
+}
 :root {
   --background: #f9f9f9; /* Fond clair */
   --text: #333333; /* Texte sombre */
