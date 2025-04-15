@@ -87,3 +87,7 @@ i {
   --accent: #ff9800; /* Orange pour attirer l'attention */
   --border: #dddddd; /* Bordures subtiles */
 }
+input{
+  width: 70%;
+  margin: 0 auto;
+}
