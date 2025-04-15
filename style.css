@@ -93,6 +93,7 @@ input{
 }
 input{
   width: 70%;
+  margin: 0 auto;
 }
 :root {
   --background: #f9f9f9; /* Fond clair */
