@@ -18,13 +18,17 @@ SOUS-TITRE : Roboto Condensed */
   --border: #dddddd; /* Bordures subtiles */
 }
 body {
-  background: #dddddd;
+  /* background: #dddddd; */
+  background-image: url(./images/pexels-bess-hamiti-83687-36487.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(1px);
 }
 .contents {
   width: 70%;
   margin: 0 auto;
   background: #f9f9f9;
-  box-shadow: 0 0 10px #dddddd;
   height: 100vh;
 }
 h1 {
@@ -38,16 +42,16 @@ h1 {
 }
 #motivationSentence {
   text-align: center;
-  padding-block: 0.5rem;
+  padding-block: 0.5rem 1rem;
   font-family: "Montserrat";
 }
 .navBar {
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   width: 100%;
   background: #007bff;
-  box-shadow: 0 0 10px #dddddd83;
+  padding-inline: 1rem;
+  box-shadow: 0 10px 15px -3px #0000001a;
 }
 .navbar_options {
   margin-inline: 1rem;
@@ -84,7 +88,7 @@ i {
 .content_mode{
   display: flex;
   justify-content: space-around;
-  margin-block: 1rem;
+  margin-block: 2.5rem 1rem;
 }
 #word-display{
   font-size: 1.5rem;
@@ -106,21 +110,40 @@ input{
   border: none;
   border-radius: 10px;
   padding-left: 15px;
-  padding-top: 5px;
+  padding-top: 10px;
   box-shadow: 0 10px 15px -3px #0000001a;
 }
 #results{
-  /* margin: 0 auto; */
   display: flex;
   justify-content: center;
   margin-top: 1rem;
   font-size: 1rem;
 }
-:root {
-  --background: #f9f9f9; /* Fond clair */
-  --text: #333333; /* Texte sombre */
-  --primary: #007bff; /* Bleu vif pour les boutons */
-  --accent: #ff9800; /* Orange pour attirer l'attention */
-  --border: #dddddd; /* Bordures subtiles */
+.restartAndNext{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3rem;
 }
-
+.restart, .next{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #007bff;
+  box-shadow: 0 0 91px #0000001a;
+  height: 3rem;
+  width: 9rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s;
+  border: none;
+  gap: 0.5rem;
+}
+.restart:hover, .next:hover{
+  background: none;
+  border: 1px solid #007bff;
+}
+.restart i, .next i{
+  font-size: 2rem;
+}
