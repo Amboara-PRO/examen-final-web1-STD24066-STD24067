@@ -14,7 +14,7 @@ form.addEventListener("submit", (e) => {
   setTimeout(() => {
     if (
       input_username_or_email.value === "amboara" &&
-      input_password.value === "faneva"
+      input_password.value === "saviola"
     ) {
       location.href = "index.html";
     } else {
