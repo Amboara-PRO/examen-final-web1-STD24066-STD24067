@@ -44,3 +44,107 @@ img {
   width: 5rem;
   height: 5rem;
 }
+h2 {
+  font-size: 2rem;
+}
+.content_title {
+  font-size: 2.5rem;
+  color: #ff9800;
+  font-style: italic;
+  font-family: "Montserrat";
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 80%;
+}
+.username_or_email,
+.password {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 1rem;
+  gap: 0.5rem;
+}
+label {
+  font-weight: bolder;
+  font-style: oblique;
+}
+.input_icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input_icon_password{
+  position: relative;
+}
+.icon_username_or_email{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-inline: 0.5rem;
+}
+.icon_username_or_email i{
+  font-size: 1.5rem;
+}
+.input_icon_password i{
+  font-size: 2.5rem;
+  position: absolute;
+  right: 3rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.input_icon_password i:hover{
+  color: #ff9800;
+  scale: 1.1;
+}
+input {
+  width: 70%;
+  height: 2.5rem;
+  outline: none;
+  border: 1px solid #f9f9f9;
+  background: transparent;
+  border-radius: 1.5rem;
+  padding-inline: 1rem;
+  color: #f9f9f9;
+  font-size: 1rem;
+}
+.error_message{
+  font-size: 0.9rem;
+  color: red;
+  text-decoration: underline;
+  opacity: 0;
+  transition: 0.2s;
+}
+.error_message_added{
+  opacity: 1;
+}
+button {
+  width: 9rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  background: #007bff;
+  color: #f9f9f9;
+  transition: 0.2s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.button_none{
+  display: none;
+}
+button i{
+  font-size: 2rem;
+}
+button:hover{
+  background: none;
+  border: 1px solid #007bff;
+  color: #007bff;
+  background: #f9f9f9;
+}
