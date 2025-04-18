@@ -19,7 +19,7 @@ SOUS-TITRE : Roboto Condensed */
 }
 body {
   /* background: #dddddd; */
-  background-image: url(./images/pexels-bess-hamiti-83687-36487.jpg);
+  background-image: url(./images/bgBody.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,6 +30,8 @@ body {
   margin: 0 auto;
   background: #f9f9f9;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 h1 {
   font-family: "Montserrat";
@@ -85,21 +87,21 @@ i {
   text-decoration: none;
   color: #f9f9f9;
 }
-.content_mode{
+.content_mode {
   display: flex;
   justify-content: space-around;
   margin-block: 2.5rem 1rem;
 }
-#word-display{
+#word-display {
   font-size: 1.5rem;
   margin: 2rem;
 }
-.input{
+.input {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-input{
+input {
   width: 70%;
   margin: 0 auto;
   padding-bottom: 2rem;
@@ -113,37 +115,9 @@ input{
   padding-top: 10px;
   box-shadow: 0 10px 15px -3px #0000001a;
 }
-#results{
+#results {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
   font-size: 1rem;
-}
-.restartAndNext{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 3rem;
-}
-.restart, .next{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #007bff;
-  box-shadow: 0 0 91px #0000001a;
-  height: 3rem;
-  width: 9rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all 0.2s;
-  border: none;
-  gap: 0.5rem;
-}
-.restart:hover, .next:hover{
-  background: none;
-  border: 1px solid #007bff;
-}
-.restart i, .next i{
-  font-size: 2rem;
 }
