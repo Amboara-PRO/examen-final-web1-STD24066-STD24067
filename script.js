@@ -5,6 +5,19 @@
  *
  * Sur ce... Amusez-vous bien !
  */
+const setting_button = document.querySelector("#setting");
+const setting_options = document.querySelector("#setting_content");
+const setting_button_back = document.querySelector(".setting_back");
+const make_filter_blur = document.querySelectorAll(".make_filter_blur");
+const log_out = document.querySelector(".setting_log_out");
+
+const wpm_value = document.querySelector(".wpm_value");
+const accuracy_value = document.querySelector(".accuracy_value");
+
+const restart_button = document.querySelector(".restart");
+const next_button = document.querySelector(".next");
+
+
 let startTime = null,
   previousEndTime = null;
 let currentWordIndex = 0;
