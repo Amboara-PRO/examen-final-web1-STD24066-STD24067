@@ -148,3 +148,45 @@ button:hover{
   color: #007bff;
   background: #f9f9f9;
 }
+/* ******************* loading animation ****************** */
+@keyframes loading {
+  from{
+    scale: 0;
+  }
+  to{
+    scale: 1;
+  }
+}
+.loading_dots{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 3rem;
+  width: 9rem;
+  margin: 0 auto;
+}
+.loading_dots_none{
+  display: none;
+}
+.dot{
+  background-color: #3C4F59ff;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  animation-name: loading;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+.loading_dot1{
+  animation-name: loading;
+}
+.loading_dot2{
+  animation-name: loading;
+  animation-delay: .5s;
+}
+.loading_dot3{
+  animation-name: loading;
+  animation-delay: 1s;
+}
