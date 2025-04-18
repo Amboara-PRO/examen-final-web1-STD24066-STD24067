@@ -16,10 +16,10 @@
 
   <body>
     <div class="contents">
-      <header>
+      <header class="make_filter_blur">
         <h1>Typing Test</h1>
         <p id="motivationSentence">
-          Practice "Typing Test" to improve your speed and accurancy
+          Practice "Typing Test" to improve your speed and accuracy
         </p>
         <nav class="navBar">
           <div class="navbar_options">
@@ -40,10 +40,10 @@
           <img src="images/logo WEB1.png" alt="" id="logo" />
         </nav>
       </header>
-      <div class="content_mode">
+      <div class="content_mode make_filter_blur">
         <div class="content_mode_dificulty">
           <label for="mode">Select Mode:</label>
-          <select id="mode">
+          <select id="mode_difficulty">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
@@ -58,12 +58,27 @@
           </select>
         </div>
       </div>
-      <main>
+      <main class="make_filter_blur">
         <p id="word-display"></p>
         <div class="input">
-          <input type="text" id="input-field" placeholder="Type here ..." autofocus/>
+          <input
+            type="text"
+            id="input-field"
+            placeholder="Type here ..."
+            autofocus
+          />
         </div>
-        <p id="results">Results :</p>
+        <!-- <p id="results">Results :</p> -->
+        <div class="results">
+          <div class="wpmANDvalue result__wpm_accuracy">
+            <p class="wpm">wpm : </p>
+            <p class="wpm_value results_value">0.00</p>
+          </div>
+          <div class="accuracyANDvalue result__wpm_accuracy">
+            <p class="accuracy">accuracy : </p>
+            <p class="accuracy_value results_value"> 0%</p>
+          </div>
+        </div>
         <div class="restartAndNext">
           <button class="restart">
             <i class="bx bx-rotate-right"></i>
