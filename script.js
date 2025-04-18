@@ -17,6 +17,22 @@ const accuracy_value = document.querySelector(".accuracy_value");
 const restart_button = document.querySelector(".restart");
 const next_button = document.querySelector(".next");
 
+setting_button.addEventListener("click", () => {
+  setting_options.classList.toggle("setting_content_none");
+  make_filter_blur.forEach((element) => {
+    element.classList.toggle("filter_blur");
+  });
+});
+setting_button_back.addEventListener("click", () => {
+  setting_options.classList.toggle("setting_content_none");
+  make_filter_blur.forEach((element) => {
+    element.classList.remove("filter_blur");
+  });
+});
+log_out.addEventListener("click", (e) => {
+  e.preventDefault();
+  location.href = "login.html";
+});
 
 let startTime = null,
   previousEndTime = null;
