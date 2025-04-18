@@ -5,23 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
     <script src="login.js" defer></script>
-    <title>Document</title>
+    <title>TYPING TEST - login</title>
 </head>
 <body>
     <div class="content">
         <div id="logo">
             <img src="images/logo WEB1.png" alt="">
         </div>
-        <h2>WELCOME TO TYPING TEST</h2>
-        <form action="submit">
-            <div class="username or email">
+        <h2>WELCOME TO <span class="content_title">"Typing Test"</span></h2>
+        <form action="submit" id="form">
+            <div class="username_or_email">
                 <label for="">username OR email</label>
-            <input type="text">
-            </div>
-            <div class="password">
-                    <label for="">password</label>
-                    <input type="text">
-            </div>
+                <div class="input_icon">
+                  <input type="text" id="input_username_or_password" required/>
+                  <div class="icon_username_or_email">
+                    <i class="bx bx-user-circle"></i>
+                    <p>OR</p>
+                    <i class="bx bx-envelope"></i>
+                  </div>
+                </div>
+                <p class="error_message">incorrect information. Please try again.</p>
+              </div>
+              <div class="password">
+                <label for="">password</label>
+                <div class="input_icon input_icon_password">
+                  <input type="password" id="input_password" required/>
+                  <i class="bx bx-lock-alt icon_lock" title="See password"></i>
+                </div>
+                <p class="error_message">incorrect information. Please try again.</p>
+              </div>
+              <button>
+                <i class="bx bx-log-in"></i>
+                <p>Log in</p>
+              </button>
         </form>
     </div>
 </body>
