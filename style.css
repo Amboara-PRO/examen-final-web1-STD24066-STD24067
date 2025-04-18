@@ -226,3 +226,35 @@ label{
 .wpm, .accuracy{
   color: #000000aa;
 }
+/* ************* button ************** */
+.restartAndNext {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+.restart,
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #007bff;
+  box-shadow: 0 0 91px #0000001a;
+  height: 3rem;
+  width: 9rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s;
+  border: none;
+  gap: 0.5rem;
+}
+.restart:hover,
+.next:hover {
+  background: none;
+  border: 1px solid #007bff;
+}
+.restart i,
+.next i {
+  font-size: 2rem;
+}
