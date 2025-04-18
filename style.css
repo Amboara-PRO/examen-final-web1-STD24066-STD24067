@@ -188,3 +188,41 @@ hr {
 .filter_blur {
   filter: blur(1px);
 }
+#word-display{
+  height: 9rem;
+  overflow: hidden;
+}
+select{
+  border: none;
+  background: #3C4F59ff;
+  color: #f9f9f9;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+label{
+  text-decoration: underline;
+  color: #000000aa;
+}
+.results{
+  /* font-size: 1.5rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 5rem;
+  margin-top: 1.5rem;
+}
+.result__wpm_accuracy{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.results_value{
+  font-size: 1.5rem;
+}
+.wpm, .accuracy{
+  color: #000000aa;
+}
