@@ -121,3 +121,70 @@ input {
   margin-top: 1rem;
   font-size: 1rem;
 }
+#setting_content {
+  position: absolute;
+  top: 0;
+  background: #eeeeee;
+  z-index: 1;
+  width: 40%;
+  right: 0;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 0 5px #0000003a;
+  transition: 0.5s;
+}
+.setting_content_none {
+  translate: 100%;
+  transition: 0.5s;
+}
+.setting_back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: none;
+  color: #f9f9f9;
+  margin-block: 1rem;
+  border-radius: 50%;
+  background: red;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  box-shadow: 0 0 5px #0000001a;
+}
+.setting_back i {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.setting_back:hover {
+  border: 1px solid red;
+  background: #f9f9f9;
+  color: red;
+}
+hr {
+  width: 90%;
+  margin: 0 auto;
+  color: #0000003a;
+}
+.setting_content_options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 2rem;
+}
+.setting_options {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+  gap: 0.5rem;
+}
+.setting_options i {
+  font-size: 1.7rem;
+}
+.filter_blur {
+  filter: blur(1px);
+}
