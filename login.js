@@ -31,3 +31,14 @@ form.addEventListener("submit", (e) => {
     }
   }, 6000);
 });
+icon_lock.addEventListener("click", () => {
+    if (input_password.type == "password") {
+      input_password.type = "text";
+      icon_lock.classList.remove("bx-lock-alt");
+      icon_lock.classList.add("bx-lock-open-alt");
+    } else if (input_password.type == "text") {
+      input_password.type = "password";
+      icon_lock.classList.add("bx-lock-alt");
+      icon_lock.classList.remove("bx-lock-open-alt");
+    }
+  });
