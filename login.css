@@ -7,43 +7,40 @@
   box-sizing: border-box;
   font-family: "Roboto";
 }
-:root {
-    --background: #f9f9f9; /* Fond clair */
-    --text: #333333; /* Texte sombre */
-    --primary: #007bff; /* Bleu vif pour les boutons */
-    --accent: #ff9800; /* Orange pour attirer l'attention */
-    --border: #dddddd; /* Bordures subtiles */
-  }
-  body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    backdrop-filter: blur(10px);
-
-  }
-.content{
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(images/bgBody.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(1px);
+  color: #f9f9f9;
+}
+.content {
   box-shadow: 0 0 5px #0000001a;
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  /* margin: 0 auto; */
-  
+  border: 1px solid #dddddd;
+  backdrop-filter: blur(9px);
+  border-radius: 1rem;
+  overflow: hidden;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
 }
-#logo{
+#logo {
   width: 100%;
-  background-color: #dddddd ;
+  background-color: #dddddd;
   text-align: center;
   box-shadow: 0 10px 15px -3px #0000001a;
 }
-
-img{
-    margin-inline: 1rem;
+img {
+  margin-inline: 1rem;
   width: 5rem;
-  /* filter: brightness(0) invert(1); */
   height: 5rem;
-
 }
