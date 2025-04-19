@@ -8,7 +8,7 @@
   font-family: "Roboto";
 }
 body {
-  background-image: url(./images/bgBody.jpg);
+  background-image: url(../images/bgBody.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

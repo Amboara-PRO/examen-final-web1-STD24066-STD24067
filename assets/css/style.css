@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url(images/bgBody.jpg);
+  background-image: url(../images/bgBody.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

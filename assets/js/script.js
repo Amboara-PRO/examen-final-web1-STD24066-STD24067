@@ -16,7 +16,7 @@ form.addEventListener("submit", (e) => {
       input_username_or_email.value === "amboara" &&
       input_password.value === "saviola"
     ) {
-      location.href = "index.html";
+      location.href = "assets/html/mainPage.html";
     } else {
       error_message.forEach((element) => {
         element.classList.add("error_message_added");

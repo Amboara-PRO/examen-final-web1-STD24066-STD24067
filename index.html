@@ -3,121 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/typingtest-com-icon-filled-256.png" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="icon" href="./images/logo WEB1.png" />
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Typing Test</title>
+    <link rel="icon" href="./assets/images/logo WEB1.png" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/script.js" defer></script>
+    <title>Typing test - login</title>
   </head>
-
   <body>
-    <div class="contents">
-      <header class="make_filter_blur">
-        <h1>Typing Test</h1>
-        <p id="motivationSentence">
-          Practice "Typing Test" to improve your speed and accuracy
-        </p>
-        <nav class="navBar">
-          <div class="navbar_options">
-            <div id="home">
-              <a href="#" class="options">
-                <i class="bx bx-home"></i>
-                <p>Home</p>
-              </a>
-            </div>
-            <div id="setting">
-              <a href="#" class="options">
-                <i class="bx bx-cog"></i>
-                <p>Setting</p>
-              </a>
+    <div class="content">
+      <div id="logo">
+        <img src="./assets/images/logo WEB1.png" alt="" />
+      </div>
+      <h2>WELCOME TO <span class="content_title">"Typing Test"</span></h2>
+      <form action="submit" id="form">
+        <div class="username_or_email">
+          <label for="">username OR email</label>
+          <div class="input_icon">
+            <input type="text" id="input_username_or_password" required />
+            <div class="icon_username_or_email">
+              <i class="bx bx-user-circle"></i>
+              <p>OR</p>
+              <i class="bx bx-envelope"></i>
             </div>
           </div>
-
-          <img src="images/logo WEB1.png" alt="" id="logo" />
-        </nav>
-      </header>
-      <div class="content_mode make_filter_blur">
-        <div class="content_mode_dificulty">
-          <label for="mode">Select Mode:</label>
-          <select id="mode_difficulty">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select>
+          <p class="error_message">incorrect information. Please try again.</p>
         </div>
-        <div class="content_mode_langage">
-          <label for="mode">Select Langague:</label>
-          <select id="mode">
-            <option value="easy">English</option>
-            <option value="medium">French</option>
-            <option value="hard">Malagasy</option>
-          </select>
-        </div>
-      </div>
-      <main class="make_filter_blur">
-        <p id="word-display"></p>
-        <div class="input">
-          <input
-            type="text"
-            id="input-field"
-            placeholder="Type here ..."
-            autofocus
-          />
-        </div>
-        <div class="resultANDanimation_finished">
-        <div class="results">
-          <div class="wpmANDvalue result__wpm_accuracy">
-            <p class="wpm">wpm : </p>
-            <p class="wpm_value results_value">0.00</p>
+        <div class="password">
+          <label for="">password</label>
+          <div class="input_icon input_icon_password">
+            <input type="password" id="input_password" required />
+            <i class="bx bx-lock-alt icon_lock" title="See password"></i>
           </div>
-          <div class="accuracyANDvalue result__wpm_accuracy">
-            <p class="accuracy">accuracy : </p>
-            <p class="accuracy_value results_value"> 0%</p>
-          </div>
+          <p class="error_message">incorrect information. Please try again.</p>
         </div>
-        <div class="animation_finished">
-          <p>Congratulation !!!!!</p>
+        <button>
+          <i class="bx bx-log-in"></i>
+          <p>Log in</p>
+        </button>
+        <div class="loading_dots loading_dots_none">
+          <div class="loading_dot1 dot"></div>
+          <div class="loading_dot2 dot"></div>
+          <div class="loading_dot3 dot"></div>
         </div>
-      </div>
-      </main>
-      <div class="restartAndNext">
-        <button class="restart">
-          <i class="bx bx-rotate-right"></i>
-          <p>Restart</p>
-        </button>
-        <button class="next">
-          <i class="bx bxs-chevron-right"></i>
-          <p>Next</p>
-        </button>
-      </div>
-      <div id="setting_content" class="setting_content_none">
-        <button class="setting_back">
-          <i class="bx bx-arrow-back"></i>
-        </button>
-        <hr></hr>
-        <div class="setting_content_options">
-          <a href="" class="setting_security setting_options">
-            <i class="bx bxs-lock"></i>
-            <p>Security</p>
-          </a>
-          <a href="" class="setting_sound setting_options">
-            <i class="bx bxs-volume-full"></i>
-            <p>Sound</p>
-          </a>
-          <a href="" class="setting_help setting_options">
-            <i class="bx bxs-help-circle"></i>
-            <p>Help</p>
-          </a>
-          <a href="" class="setting_log_out setting_options">
-            <i class='bx bx-log-out'></i>
-            <p>Log out</p>
-          </a>
-        </div>
-      </div>
+      </form>
     </div>
   </body>
 </html>

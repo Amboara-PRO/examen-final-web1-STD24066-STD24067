@@ -39,7 +39,7 @@ setting_button_back.addEventListener("click", () => {
 });
 log_out.addEventListener("click", (e) => {
   e.preventDefault();
-  location.href = "login.html";
+  location.href = "/index.html";
 });
 
 let startTime = null,
