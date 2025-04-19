@@ -10,12 +10,20 @@ const setting_options = document.querySelector("#setting_content");
 const setting_button_back = document.querySelector(".setting_back");
 const make_filter_blur = document.querySelectorAll(".make_filter_blur");
 const log_out = document.querySelector(".setting_log_out");
-
 const wpm_value = document.querySelector(".wpm_value");
 const accuracy_value = document.querySelector(".accuracy_value");
-
 const restart_button = document.querySelector(".restart");
 const next_button = document.querySelector(".next");
+const mode_difficultySelect = document.getElementById("mode_difficulty");
+const wordDisplay = document.getElementById("word-display");
+const inputField = document.getElementById("input-field");
+const results = document.getElementById("results");
+const animation_finished = document.querySelector(".animation_finished");
+const resultANDanimation_finished = document.querySelector(
+  ".resultANDanimation_finished"
+);
+let totalTypedChars = 0;
+let totalCorrectChars = 0;
 
 setting_button.addEventListener("click", () => {
   setting_options.classList.toggle("setting_content_none");
@@ -38,11 +46,7 @@ let startTime = null,
   previousEndTime = null;
 let currentWordIndex = 0;
 const wordsToType = [];
-
-const modeSelect = document.getElementById("mode");
-const wordDisplay = document.getElementById("word-display");
-const inputField = document.getElementById("input-field");
-const results = document.getElementById("results");
+let originalWords = [];
 
 const words = {
   easy: ["apple", "banana", "grape", "orange", "cherry"],
@@ -63,26 +67,37 @@ const getRandomWord = (mode) => {
 };
 
 // Initialize the typing test
-const startTest = (wordCount = 50) => {
-  wordsToType.length = 0; // Clear previous words
-  wordDisplay.innerHTML = ""; // Clear display
+const startTest = (wordCount = 25, reuseWords = false) => {
+  wordsToType.length = 0;
+  wordDisplay.innerHTML = "";
   currentWordIndex = 0;
   startTime = null;
   previousEndTime = null;
+  totalTypedChars = 0;
+  totalCorrectChars = 0;
 
-  for (let i = 0; i < wordCount; i++) {
-    wordsToType.push(getRandomWord(modeSelect.value));
+  // Reprendre les mots précédents ou en générer de nouveaux
+  if (reuseWords && originalWords.length > 0) {
+    originalWords.forEach((word) => wordsToType.push(word));
+  } else {
+    for (let i = 0; i < wordCount; i++) {
+      wordsToType.push(getRandomWord(mode_difficultySelect.value));
+    }
+    originalWords = [...wordsToType];
   }
 
+  // Affichage
   wordsToType.forEach((word, index) => {
     const span = document.createElement("span");
     span.textContent = word + " ";
-    if (index === 0) span.style.color = "blue"; // Highlight first word
+    if (index === 0) span.style.color = "red";
     wordDisplay.appendChild(span);
   });
 
   inputField.value = "";
-  results.textContent = "";
+  wpm_value.textContent = "0.00";
+  accuracy_value.textContent = "0%";
+  inputField.focus();
 };
 
 // Start the timer when user begins typing
@@ -96,28 +111,8 @@ const getCurrentStats = () => {
   const wpm = wordsToType[currentWordIndex].length / 5 / (elapsedTime / 60); // 5 chars = 1 word
   const accuracy =
     (wordsToType[currentWordIndex].length / inputField.value.length) * 100;
-    
+
   return { wpm: wpm.toFixed(2), accuracy: accuracy.toFixed(2) };
-};
-
-// Move to the next word and update stats only on spacebar press
-const updateWord = (event) => {
-  if (event.key === " ") {
-    // Check if spacebar is pressed
-    if (inputField.value.trim() === wordsToType[currentWordIndex]) {
-      if (!previousEndTime) previousEndTime = startTime;
-
-      const { wpm, accuracy } = getCurrentStats();
-      results.textContent = `WPM: ${wpm}, Accuracy: ${accuracy}%`;
-
-      currentWordIndex++;
-      previousEndTime = Date.now();
-      highlightNextWord();
-
-      inputField.value = ""; // Clear input field after space
-      event.preventDefault(); // Prevent adding extra spaces
-    }
-  }
 };
 
 // Highlight the current word in red
@@ -131,14 +126,79 @@ const highlightNextWord = () => {
     wordElements[currentWordIndex].style.color = "red";
   }
 };
+// Move to the next word and update stats only on spacebar press
+const updateWord = (event) => {
+  if (event.key === " ") {
+    const typed = inputField.value.trim();
+    const expected = wordsToType[currentWordIndex];
 
-// Event listeners
-// Attach `updateWord` to `keydown` instead of `input`
+    // 1. Incrémente les caractères tapés
+    totalTypedChars += typed.length;
+
+    // 2. Compare caractère par caractère
+    let correctChars = 0;
+    for (let i = 0; i < Math.min(typed.length, expected.length); i++) {
+      if (typed[i] === expected[i]) correctChars++;
+    }
+
+    totalCorrectChars += correctChars;
+
+    // 3. Calcul de l'accuracy
+    const accuracy =
+      totalTypedChars === 0 ? 100 : (totalCorrectChars / totalTypedChars) * 100;
+
+    // 4. Calcul du WPM (1 mot = 5 caractères)
+    if (!previousEndTime) previousEndTime = startTime;
+    const elapsedTime = (Date.now() - previousEndTime) / 1000;
+    const wpm = typed.length / 5 / (elapsedTime / 60);
+
+    // 5. Mise à jour UI
+    wpm_value.textContent = wpm.toFixed(2);
+    accuracy_value.textContent = `${accuracy.toFixed(2)}%`;
+
+    // 6. Préparation mot suivant
+    currentWordIndex++;
+    previousEndTime = Date.now();
+    highlightNextWord();
+
+    inputField.value = "";
+    event.preventDefault();
+    if (currentWordIndex >= wordsToType.length) {
+      animation_finished.classList.add("animation_finished_added");
+      resultANDanimation_finished.classList.add(
+        "resultANDanimation_finished_added"
+      );
+      return;
+    }
+  }
+};
+
 inputField.addEventListener("keydown", (event) => {
   startTimer();
   updateWord(event);
 });
-modeSelect.addEventListener("change", () => startTest());
+mode_difficultySelect.addEventListener("change", () => startTest());
 
+restart_button.addEventListener("click", () => {
+  console.log("Bouton restart cliqué");
+  startTest(25, true);
+  animation_finished.classList.remove("animation_finished_added");
+  resultANDanimation_finished.classList.remove(
+    "resultANDanimation_finished_added"
+  );
+  inputField.focus();
+});
+
+next_button.addEventListener("click", () => {
+  console.log("Bouton next cliqué");
+  startTest();
+  animation_finished.classList.remove("animation_finished_added");
+  resultANDanimation_finished.classList.remove(
+    "resultANDanimation_finished_added"
+  );
+  inputField.focus();
+});
 // Start the test
 startTest();
+
+// ************* restart **************

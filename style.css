@@ -1,6 +1,3 @@
-/* TITRE : Montserrat
-PARAGRAPHE : Roboto
-SOUS-TITRE : Roboto Condensed */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
@@ -10,15 +7,7 @@ SOUS-TITRE : Roboto Condensed */
   box-sizing: border-box;
   font-family: "Roboto";
 }
-:root {
-  --background: #f9f9f9; /* Fond clair */
-  --text: #333333; /* Texte sombre */
-  --primary: #007bff; /* Bleu vif pour les boutons */
-  --accent: #ff9800; /* Orange pour attirer l'attention */
-  --border: #dddddd; /* Bordures subtiles */
-}
 body {
-  /* background: #dddddd; */
   background-image: url(./images/bgBody.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -90,11 +79,11 @@ i {
 .content_mode {
   display: flex;
   justify-content: space-around;
-  margin-block: 2.5rem 1rem;
+  margin-block: 1.5rem 0.5rem;
 }
 #word-display {
   font-size: 1.5rem;
-  margin: 2rem;
+  margin: 1rem 2rem;
 }
 .input {
   width: 100%;
@@ -176,7 +165,6 @@ hr {
 }
 .setting_options {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   text-decoration: none;
   color: #000000;
@@ -206,13 +194,12 @@ label{
   color: #000000aa;
 }
 .results{
-  /* font-size: 1.5rem; */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   gap: 5rem;
-  margin-top: 1.5rem;
+  margin-block: 1.5rem;
 }
 .result__wpm_accuracy{
   display: flex;
@@ -226,7 +213,6 @@ label{
 .wpm, .accuracy{
   color: #000000aa;
 }
-/* ************* button ************** */
 .restartAndNext {
   display: flex;
   justify-content: space-around;
@@ -257,4 +243,35 @@ label{
 .restart i,
 .next i {
   font-size: 2rem;
+}
+.animation_finished{
+  text-align: center;
+  font-family: "Roboto Condensed";
+  font-size: 1.5rem;
+  display: none;
+  transition: 0.5s;
+}
+.animation_finished_added{
+  display: block;
+  transition: 0.5s;
+}
+main{
+  position: relative;
+}
+.resultANDanimation_finished_added{
+  background: green;
+  width: 50%;
+  margin: 0 auto;
+  position: absolute;
+  left: 25%;
+  top: 35%;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #eeeeeeee;
+  height: 10rem;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #0000003a;
 }
