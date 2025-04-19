@@ -32,7 +32,7 @@ setting_button_back.addEventListener("click", () => {
 });
 log_out.addEventListener("click", (e) => {
   e.preventDefault();
-  location.href = "/index.html";
+  location.href = "/examen-final-web1-STD24066-STD24067/index.html";
 });
 
 let startTime = null,
